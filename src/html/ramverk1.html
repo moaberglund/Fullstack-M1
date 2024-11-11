@@ -7,6 +7,8 @@
     <title>Fullstack M1</title>
     <!-- js -->
     <script type="module" src="../js/nav.js"></script>
+    <script type="module" src="../js/milli_DOM.js"></script>
+
     <!-- scss -->
     <link rel="stylesheet" href="../styling/main.scss">
     <!-- google icons -->
@@ -81,7 +83,7 @@
             <p>Denna sidan har använt sig av ramverket Milligram.</p>
 
             <p>Läs mer om ramverket på länken nedan</p>
-            <a class="button" target="_blank" href="https://milligram.io/#getting-started">Milligram</a>
+            <a class="button button-outline" target="_blank" href="https://milligram.io/#getting-started">Milligram</a>
 
         </section>
 
@@ -99,20 +101,20 @@
                     <input type="text" placeholder="JK Rowling" id="authorField">
 
 
-                    <label for="rating">Rating (1-5)</label>
-                    <select id="rating">
+                    <label for="ratingField">Rating (1-5)</label>
+                    <select id="ratingField">
                         <option value="default"> Ej läst...</option>
-                        <option value="1">⭐</option>
-                        <option value="2">⭐ ⭐</option>
-                        <option value="3">⭐ ⭐ ⭐</option>
-                        <option value="4">⭐ ⭐ ⭐ ⭐</option>
-                        <option value="5">⭐ ⭐ ⭐ ⭐ ⭐</option>
+                        <option value="⭐">⭐</option><!-- 1 -->
+                        <option value="⭐ ⭐">⭐ ⭐</option><!-- 2 -->
+                        <option value="⭐ ⭐ ⭐">⭐ ⭐ ⭐</option><!-- 3 -->
+                        <option value="⭐ ⭐ ⭐ ⭐">⭐ ⭐ ⭐ ⭐</option><!-- 4 -->
+                        <option value="⭐ ⭐ ⭐ ⭐ ⭐">⭐ ⭐ ⭐ ⭐ ⭐</option><!-- 5 -->
                     </select>
 
-                    <label for="status">Status</label>
-                    <select id="status">
-                        <option value="wanttoread">Vill läsa </option>
-                        <option value="read">Har läst</option>
+                    <label for="statusField">Status</label>
+                    <select id="statusField">
+                        <option value="Vill läsa">Vill läsa</option>
+                        <option value="Har läst">Har läst</option>
                     </select>
 
 
@@ -124,7 +126,9 @@
                     <textarea placeholder="Tankar om boken, bra att veta, etc." id="commentField"></textarea>
 
 
-                    <input class="button-primary" type="submit" value="Send">
+                    <input id="submitBtn" class="button-primary" type="submit" value="Send">
+
+                    <p id="errorMessage"></p>
                 </fieldset>
 
             </form>
@@ -144,11 +148,15 @@
                         <th>Kommentar</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="DOM_books">
+                    <!-- DOM utskrivning av böcker -->
 
                 </tbody>
 
             </table>
+
+            <input id="deleteBtn" class="button button-outline" type="submit" value="Rensa">
+
         </section>
 
 
