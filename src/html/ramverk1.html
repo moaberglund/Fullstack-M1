@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack M1</title>
+    <!-- js -->
+    <script type="module" src="../js/nav.js"></script>
+    <!-- scss -->
+    <link rel="stylesheet" href="../styling/main.scss">
+    <!-- google icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <!-- font awesonme -->
+    <script src="https://kit.fontawesome.com/9543e08d94.js" crossorigin="anonymous"></script>
+
+    <!-- milligram ramverk -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+
+</head>
+
+<body>
+    <header>
+
+        <!-- burgar meny -->
+        <div id="drop-nav" class="header-1">
+
+            <button class="menu-btn open" id="open-menu"><span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+            <nav id="burger-nav">
+                <button class="menu-btn close" id="close-menu"><i class="fa-solid fa-x"></i>
+                </button>
+                <ul>
+                    <li><a href="../index.html">Homepage</a></li>
+                    <li><a href="ramverk1.html">Ramverk 1</a></li>
+                    <li><a href="ramverk2.html">Ramverk 2</a></li>
+                    <li><a href="publicering.html">Publicering</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header-2">
+
+            <!-- a tagg med ikon -->
+            <a href="../index.html">
+                <img src="../media/mb_logo.png" alt="Logotyp">
+            </a>
+
+        </div>
+
+        <!-- desktop meny -->
+        <div class="header-3">
+            <nav id="desktop-navigation">
+                <ul>
+                    <li><a href="../index.html">Ramverk 1</a></li>
+                    <li><a href="ramverk2.html">Ramverk 2</a></li>
+                    <li><a href="publicering.html">Publicering</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- hero image -->
+        <section id="header-img" class="hero">
+            <h1>Milligram</h1>
+
+        </section>
+
+        <!-- text -->
+        <section id="milligram">
+            <h2>Om ramverket</h2>
+            <p>Denna sidan har använt sig av ramverket Milligram.</p>
+
+            <p>Läs mer om ramverket på länken nedan</p>
+            <a class="button" target="_blank" href="https://milligram.io/#getting-started">Milligram</a>
+
+        </section>
+
+        <!-- formulär -->
+        <section>
+            <h2>Formulär</h2>
+            <p>Ett formulär för att hålla koll på böcker.</p>
+
+            <form id="book_form">
+                <fieldset>
+                    <label for="titleField">Boktitel</label>
+                    <input type="text" placeholder="Harry Potter" id="titleField">
+
+                    <label for="authorField">Författare</label>
+                    <input type="text" placeholder="JK Rowling" id="authorField">
+
+
+                    <label for="rating">Rating (1-5)</label>
+                    <select id="rating">
+                        <option value="default"> Ej läst...</option>
+                        <option value="1">⭐</option>
+                        <option value="2">⭐ ⭐</option>
+                        <option value="3">⭐ ⭐ ⭐</option>
+                        <option value="4">⭐ ⭐ ⭐ ⭐</option>
+                        <option value="5">⭐ ⭐ ⭐ ⭐ ⭐</option>
+                    </select>
+
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option value="wanttoread">Vill läsa </option>
+                        <option value="read">Har läst</option>
+                    </select>
+
+
+                    <input type="checkbox" id="confirmField">
+                    <label class="label-inline" for="confirmField">Har hemma</label>
+
+
+                    <label for="commentField">Kommentar</label>
+                    <textarea placeholder="Tankar om boken, bra att veta, etc." id="commentField"></textarea>
+
+
+                    <input class="button-primary" type="submit" value="Send">
+                </fieldset>
+
+            </form>
+        </section>
+
+        <!-- tabell -->
+        <section>
+            <h2>Tabell</h2>
+            <table id="book_table">
+                <thead>
+                    <tr>
+                        <th>Boktitel</th>
+                        <th>Författare</th>
+                        <th>Rating</th>
+                        <th>Status</th>
+                        <th>Har hemma</th>
+                        <th>Kommentar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; Moa Berglund 2024</p>
+    </footer>
+
+</body>
+
+</html>
