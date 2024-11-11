@@ -1,0 +1,193 @@
+$header_bg: #ececec;
+$brown: #4B3A29;
+$mozzarella: #EBE1D3;
+$beige: #DEC9A0;
+$coal: #2D2A26;
+$transparent-coal: rgb(45, 42, 38, 0.9);
+
+
+header {
+    background-color: $header_bg;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+.header-1 {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+#drop-nav {
+
+    nav {
+        background-color: $coal;
+        position: fixed;
+        left: -30;
+        top: 0;
+        height: 100vh;
+        width: 30vw;
+        max-width: 400px;
+        transform: translateX(-100%); // Start position utanför skärmen
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; // Justerad transition-tid
+        visibility: hidden; // För att hantera animationen
+        opacity: 0; // För att hantera fade in/out
+
+        &.open {
+            transform: translateX(0); // Slutposition på skärmen
+            visibility: visible;
+            position: fixed;
+            opacity: 1;
+        }
+
+        ul {
+            width: 100%;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            top: 7em;
+            position: absolute;
+            text-align: left;
+        }
+
+        li {
+            padding: 1em 1em 1em 3em;
+            width: 100%;
+        }
+
+        a {
+            color: $mozzarella;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 20px;
+            line-height: 2em;
+            padding: 0 0 0 0.5em;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .menu-btn {
+        border: none; //få bort kant som låg runt
+        position: absolute;
+        left: 3em;
+        top: 2.5em;
+        display: flex;
+        align-items: center;
+        background-color: $header_bg;
+        cursor: pointer;
+        max-width: 400px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .open {
+        position: absolute;
+    }
+
+    .close {
+        position: absolute;
+        left: 3.5em;
+        top: 1.8em;
+        font-size: 1.3em;
+        background-color: $coal;
+        color: $mozzarella;
+        &:hover {
+            color: lighten($mozzarella, 40%);
+        }
+    }
+}
+
+
+.header-2 {
+    grid-column: 2/3;
+    grid-row: 1;
+
+    img {
+        width: 80px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.header-3 {
+    grid-column: 3/4;
+    grid-row: 1;
+
+    nav {
+
+        padding: 0.5em;
+
+        ul {
+            padding-top: 1em;
+            text-align: right;
+            position: static;
+        }
+
+        li {
+            display: inline;
+            padding: 1em;
+        }
+
+        a {
+            color: black;
+            font-weight: 400;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+                color: $brown;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    #drop-nav {
+        nav {
+            width: 100vw;
+            max-width: 250px;
+        }
+    }
+
+    header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .header-1 {
+        grid-column: 1/2;
+    }
+
+    .header-2 {
+        grid-column: 2/3;
+
+        img {
+            margin-right: 3em;
+        }
+    }
+
+    .header-3 {
+        display: none;
+    }
+
+}

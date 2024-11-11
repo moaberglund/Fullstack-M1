@@ -4,11 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fullstack M1</title>
-    <script type="module" src="js/main.js"></script>
+    <!-- js -->
+    <script type="module" src="js/nav.js"></script>
+    <!-- scss -->
+    <link rel="stylesheet" href="styling/main.scss">
+    <!-- google icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <!-- font awesonme -->
+        <script src="https://kit.fontawesome.com/9543e08d94.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
     <header>
-        <h1>Hej</h1>
+
+        <!-- burgar meny -->
+        <div id="drop-nav" class="header-1">
+
+            <button class="menu-btn open" id="open-menu"><span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+            <nav id="burger-nav">
+                <button class="menu-btn close" id="close-menu"><i class="fa-solid fa-x"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="html/ramverk1.html">Ramverk 1</a></li>
+                    <li><a href="html/ramverk2.html">Ramverk 2</a></li>
+                    <li><a href="html/publicering.html">Publicering</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header-2">
+
+            <!-- a tagg med ikon -->
+
+        </div>
+
+        <!-- desktop meny -->
+        <div class="header-3">
+            <nav id="desktop-navigation">
+                <ul>
+                    <li><a href="html/ramverk1.html">Ramverk 1</a></li>
+                    <li><a href="html/ramverk2.html">Ramverk 2</a></li>
+                    <li><a href="html/publicering.html">Publicering</a></li>                   
+                </ul>
+            </nav>
+        </div>
+      
     </header>
 
     <main></main>
