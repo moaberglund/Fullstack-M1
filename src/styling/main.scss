@@ -1,11 +1,15 @@
-$header_bg: #ececec;
+$header_bg: #ffffff;
 $brown: #4B3A29;
 $mozzarella: #EBE1D3;
 $beige: #DEC9A0;
 $coal: #2D2A26;
 $transparent-coal: rgb(45, 42, 38, 0.9);
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 header {
     background-color: $header_bg;
     display: grid;
@@ -159,6 +163,21 @@ header {
     }
 }
 
+#header-img {
+    height: 20vh;
+    background-image: url("../media/watercolor.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 3em;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 2em;
+    }
+}
 
 
 @media screen and (max-width: 800px) {
