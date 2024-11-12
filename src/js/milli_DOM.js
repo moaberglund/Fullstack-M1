@@ -55,7 +55,7 @@ function addMt() {
         author: bookAuthor.value,
         rating: bookRating.value,
         status: bookStatus.value,
-        ownership: bookOwnership.value,
+        ownership: bookOwnership.checked ? "Ja" : "Nej", //om checked = ja, annars = nej
         comment: bookComment.value
     };
 
@@ -70,6 +70,7 @@ function addMt() {
     bookAuthor.value = "";
     bookRating.value = "Ej läst...";
     bookStatus.value = "Vill läsa";
+    bookOwnership.checked = false;
     bookComment.value = "";
     //nollställ felmeddelandet
     message.innerHTML = "";
