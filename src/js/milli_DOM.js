@@ -10,19 +10,19 @@ const submitButton = document.getElementById('submitBtn');
 const message = document.getElementById('errorMessage');
 const deleteButton = document.getElementById('deleteBtn');
 
-const bookTable = document.getElementById('DOM_books');
+const mtTable = document.getElementById('DOM_books');
 
 
 //lyssnare
 if (submitButton) {
-    submitButton.addEventListener('click', addBook);
+    submitButton.addEventListener('click', addMt);
 }
 if (deleteButton) {
     deleteButton.addEventListener('click', clearStorage);
 }
 
 //array att lagra datan i 
-let bookArray = [];
+let mtArray = [];
 
 
 //initiering
@@ -30,17 +30,17 @@ window.onload = init;
 
 function init() {
     //läs in från storage
-    bookArray = loadFromStorage();
+    mtArray = loadFromStorage();
 
     //skriv ut till DOM
-    displayBooks();
+    displayMt();
 }
 
 
 //FUNKTIONER
 
 //lägg till
-function addBook() {
+function addMt() {
 
     event.preventDefault();
     //validera att alla input fält är ifyllda
@@ -60,10 +60,10 @@ function addBook() {
     };
 
     //lägg till objektet i arrayen
-    bookArray.push(book);
+    mtArray.push(book);
 
     //anropa funktion för att skriva ut till DOM
-    displayBooks();
+    displayMt();
 
     //återställ input fälten
     bookTitle.value = "";
@@ -84,7 +84,7 @@ function addBook() {
 //lagra
 function saveToStorage() {
     //konvertera arrayen till en JSON-sträng och lagra den
-    localStorage.setItem('bookArray', JSON.stringify(bookArray));
+    localStorage.setItem('bookArray', JSON.stringify(mtArray));
 }
 
 
@@ -95,8 +95,8 @@ function loadFromStorage() {
 
     //OM det finns något, konvertera JSON tillbaka till array
     if (storedBooks) {
-        bookArray = JSON.parse(storedBooks);
-        return bookArray;
+        mtArray = JSON.parse(storedBooks);
+        return mtArray;
     }
 
     //annars returnera en tom array
@@ -104,13 +104,13 @@ function loadFromStorage() {
 }
 
 //skriv ut till DOM
-function displayBooks() {
+function displayMt() {
 
     //rensa DOM
-    bookTable.innerHTML = "";
+    mtTable.innerHTML = "";
 
     //loopa igenom arrayen
-    bookArray.forEach((book) => {
+    mtArray.forEach((book) => {
         //skapa en ny rad för varje bok
         const newRow = document.createElement('tr');
         //lägg till klass
@@ -125,7 +125,7 @@ function displayBooks() {
         `;
 
         //lägg till raden i tabellen
-        bookTable.appendChild(newRow);
+        mtTable.appendChild(newRow);
     })
 }
 
@@ -135,5 +135,5 @@ function clearStorage() {
     //rensa storage
     localStorage.clear();
     //rensa DOM
-    bookTable.innerHTML = "";
+    mtTable.innerHTML = "";
 }

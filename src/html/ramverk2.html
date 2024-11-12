@@ -111,7 +111,7 @@
                         <input type="text" placeholder="Mout Blanc" id="nameField" class="form-control">
                         <br>
 
-                        <label for="hightField" class="form-label">Meter över havet</label>
+                        <label for="hightField" class="form-label">Höjd</label>
                         <input type="number" placeholder="4810" id="hightField" class="form-control">
                         <br>
 
@@ -135,7 +135,7 @@
                         <textarea placeholder="Utrustning, bra att veta, etc." id="commentField" class="form-control"></textarea>
                         <br>
 
-                        <button type="submit" class="btn btn-primary">Skicka</button>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Skicka</button>
 
                         <p id="errorMessage"></p>
                     </fieldset>
@@ -149,22 +149,22 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Boktitel</th>
-                            <th scope="col">Författare</th>
-                            <th scope="col">Rating</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Har hemma</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Namn</th>
+                            <th scope="col">Höjd</th>
+                            <th scope="col">Världsdel</th>
+                            <th scope="col">Har bestigit</th>
                             <th scope="col">Kommentar</th>
                         </tr>
                     </thead>
-                    <tbody id="DOM">
+                    <tbody id="DOM_mt">
                         <!-- DOM utskrivning av ... -->
 
                     </tbody>
 
                 </table>
 
-                <button type="reset" class="btn btn-secondary">Rensa</button>
+                <button type="reset" class="btn btn-secondary" id="deleteBtn">Rensa</button>
 
 
             </section>
