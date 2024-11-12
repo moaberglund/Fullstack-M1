@@ -16,6 +16,7 @@
   },
   "browserlist": ">0.5%, last 2 versions, not dead",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "milligram": "^1.4.1"
   }
 }
