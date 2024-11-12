@@ -65,12 +65,11 @@ function addBook() {
     //anropa funktion för att skriva ut till DOM
     displayBooks();
 
-    //nollställ input fälten
+    //återställ input fälten
     bookTitle.value = "";
     bookAuthor.value = "";
-    bookRating.value = "";
-    bookStatus.value = "";
-    bookOwnership.value = "";
+    bookRating.value = "Ej läst...";
+    bookStatus.value = "Vill läsa";
     bookComment.value = "";
     //nollställ felmeddelandet
     message.innerHTML = "";

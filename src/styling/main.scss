@@ -179,6 +179,16 @@ header {
     }
 }
 
+h2 {
+    padding-top: 1em;
+}
+
+footer {
+    margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    background-color: $mozzarella;
+}
 
 @media screen and (max-width: 800px) {
 
