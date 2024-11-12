@@ -1,6 +1,6 @@
 //variabler
 const mtName = document.getElementById('nameField');
-const mtHight = document.getElementById('hightField');
+const mtHeight = document.getElementById('heightField');
 const mtContinent = document.getElementById('continentField');
 const mtClimbed = document.getElementById('confirmField');
 const mtComment = document.getElementById('commentField');
@@ -39,11 +39,11 @@ function init() {
 //FUNKTIONER
 
 //lägg till
-function addMt() {
+function addMt(event) {
 
     event.preventDefault();
     //validera att alla input fält är ifyllda
-    if (mtName.value === "" || mtHight.value === "" || mtContinent.value === "" || mtClimbed.value === "" || mtComment.value === "") {
+    if (mtName.value === "" || mtHeight.value === "" || mtContinent.value === "" || mtClimbed.value === "" || mtComment.value === "") {
         message.innerHTML ="Vänligen fyll i alla fält";
         return;
     }
@@ -51,9 +51,9 @@ function addMt() {
     //skapa ett objekt
     let mt = {
         name: mtName.value,
-        hight: mtHight.value,
+        height: mtHeight.value,
         continent: mtContinent.value,
-        climbed: mtClimbed.value,
+        climbed: mtClimbed.checked ? "Ja" : "Nej", //om checked = ja, annars = nej
         comment: mtComment.value
     };
 
@@ -65,8 +65,9 @@ function addMt() {
 
     //återställ input fälten
     mtName.value = "";
-    mtHight.value = "";
+    mtHeight.value = "";
     mtContinent.value = "Europa";
+    mtClimbed.checked = false;
     mtComment.value = "";
     //nollställ felmeddelandet
     message.innerHTML = "";
@@ -115,7 +116,7 @@ function displayMt() {
         newRow.innerHTML = `
             <th scope="row">${mtArray.indexOf(mt) + 1}</th>
             <td>${mt.name}</td>
-            <td>${mt.hight}</td>
+            <td>${mt.height}</td>
             <td>${mt.continent}</td>
             <td>${mt.climbed}</td>
             <td>${mt.comment}</td>          
