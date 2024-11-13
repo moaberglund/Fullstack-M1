@@ -9,6 +9,7 @@ $transparent-coal: rgb(45, 42, 38, 0.9);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 header {
     background-color: $header_bg;
@@ -176,11 +177,24 @@ header {
         text-transform: uppercase;
         text-align: center;
         padding-top: 2em;
+        font-weight: 200;
     }
 }
 
-h2 {
-    padding-top: 1em;
+.main {
+    max-width: 900px;
+    margin: 0 2em;
+    line-height: 1.4em;
+
+    h2 {
+        padding-top: 1em;
+        text-transform: uppercase;
+        font-weight: 200;    
+    }
+    p {
+        margin: 0.7em 0;
+        letter-spacing: 0.5px;
+    }
 }
 
 footer {
