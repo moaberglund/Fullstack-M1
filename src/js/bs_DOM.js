@@ -134,4 +134,6 @@ function clearStorage() {
     localStorage.clear();
     //rensa DOM
     mtTable.innerHTML = "";
+
+    mtArray = [];
 }
