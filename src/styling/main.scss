@@ -170,6 +170,7 @@ header {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    margin-bottom: 2em;
 
     h1 {
         font-size: 3em;
@@ -183,11 +184,10 @@ header {
 
 .main {
     max-width: 900px;
-    margin: 0 2em;
+    margin: 0 auto;
     line-height: 1.4em;
 
     h2 {
-        padding-top: 1em;
         text-transform: uppercase;
         font-weight: 200;    
     }
@@ -204,7 +204,7 @@ footer {
     background-color: $mozzarella;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 920px) {
 
     #drop-nav {
         nav {
@@ -233,4 +233,7 @@ footer {
         display: none;
     }
 
+    .main {
+        margin: 1em;
+    }
 }
