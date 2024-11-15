@@ -16,6 +16,10 @@
     <!-- favicon -->
     <link rel="icon" href="../media/favicon.ico" type="image/x-icon">
 
+    <!-- tailwind -->
+    <link rel="stylesheet" href="./../styling/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
 </head>
 
@@ -71,30 +75,65 @@
 
         </section>
         <section class="main">
-            <h2>Vercel</h2>
-            <p>För publicering  använde jag Vercel.</p>
-            <p>När man publicerar ett Parcel projekt så behöver källan för publicering vara rooten av mappen "/." Det fungerade sömnlöst att ladda
+            <h2 class="mt-8 p-4 bg-blue-400 rounded-md text-lg">Vercel</h2>
+            <p>För publicering använde jag Vercel.</p>
+            <p>När man publicerar ett Parcel projekt så behöver källan för publicering vara rooten av mappen "/." Det
+                fungerade sömnlöst att ladda
                 upp och tjänsten har automatiserad publicering, den lyssnar alltså på Github repot efter nya commits och
                 uppdaterar applikationen om nya ändringar gjorts.</p>
-                <p>Vercel har både gratis och betal varianter beroende på vad du vill få ut från din webbplats du lägger upp via dem.</p>
-                <p>Förutom Parcel som jag har använt mig av i detta projekt så har Vercel även stöd för en hel del andra ramverk, några exempel är:</p>
-                <ul>
+            <p>Vercel har både gratis och betal varianter beroende på vad du vill få ut från din webbplats du lägger upp
+                via dem.</p>
+            <p>Förutom Parcel som jag har använt mig av i detta projekt så har Vercel även stöd för en hel del andra
+                ramverk, några exempel är:</p>
+            <ul class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2">
+                <div
+                    class="bg-blue-200 p-2 m-1 rounded tracking-widest cursor-pointer hover:font-semibold hover:bg-blue-300 text-center">
                     <li>React</li>
+                </div>
+                <div
+                    class="bg-green-200 p-2 m-1 rounded tracking-widest text-center cursor-pointer hover:font-semibold hover:bg-green-300">
                     <li>Vue</li>
-                    <li>Next</li>
-                    <li>Nuxt</li>
+                </div>
+                <div
+                    class="bg-red-200 p-2 m-1 rounded tracking-widest text-center cursor-pointer hover:font-semibold hover:bg-red-300">
                     <li>Angular</li>
-                    <li>Vite</li>
+                </div>
+                <div
+                    class="bg-gray-200 p-2 m-1 rounded tracking-widest text-center cursor-pointer hover:font-semibold hover:bg-gray-300">
+                    <li>Next</li>
+                </div>
+                <div
+                    class="bg-green-200 p-2 m-1 rounded tracking-widest text-center cursor-pointer hover:font-semibold hover:bg-green-300">
+                    <li>Nuxt</li>
+                </div>
+                <div
+                    class="bg-orange-200 p-2 m-1 rounded tracking-widest text-center cursor-pointer hover:font-semibold hover:bg-orange-300">
                     <li>Svelte</li>
+                </div>
+                <div
+                    class="bg-purple-200 p-2 m-1 rounded tracking-widest text-center cursor-pointer hover:font-semibold hover:bg-purple-300">
+                    <li>Vite</li>
+                </div>
+                <div
+                    class="bg-pink-200 p-2 m-1 rounded tracking-widest text-center cursor-pointer hover:font-semibold hover:bg-pink-300">
                     <li>Astro</li>
-                    <li>Hugo</li>
-                    <li>Hexo</li>
-                </ul>
+                </div>
 
-            <h2>Azure</h2>
-            <p>Provade även publicera med Azure men lyckades tyvärr inte få igenom publicering där, behöver gräva lite djupare i hur man publicerar
-                bäst med den platformen. Stylingen hängde inte med när jag publicerade men har i alla fall kommit ett första steg
+            </ul>
+
+            <h2 class="mt-8 p-4 bg-blue-400 rounded-md text-lg">Azure</h2>
+            <p>Provade även publicera med Azure men lyckades tyvärr inte få igenom publicering där, behöver gräva lite
+                djupare i hur man publicerar
+                bäst med den platformen. Stylingen hängde inte med när jag publicerade men har i alla fall kommit ett
+                första steg
                 på vägen med att sätta upp konto och utforska webbplatsen lite.</p>
+
+            <h2 class="mt-8 p-4 bg-blue-400 rounded-md text-lg">Tailwind</h2>
+            <p>Denna undersida har skapats med hjälp av CSS ramverket Tailwind. Hade problem med npm installationen men rullade på fint när jag bytte till CDN istället. 
+                Tailwind är ett smidigt sätt att styla sin webbplats på, speciellt om man inte är så bekant med CSS styling sedan innan. Det har varit nice att få en känsla av hur det fungerar. 
+            </p>
+            <p class="pb-6">För att läsa mer om Tailwind, besök deras hemsida via länken nedan:</p>
+            <a target="_blank" href="https://v2.tailwindcss.com/" class="p-3 border-2 border-indigo-200 rounded-xl tracking-widest hover:bg-indigo-800 hover:text-white">Tailwind</a>
         </section>
 
     </main>
