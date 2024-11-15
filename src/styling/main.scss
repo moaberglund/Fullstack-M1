@@ -177,8 +177,9 @@ header {
         letter-spacing: 8px;
         text-transform: uppercase;
         text-align: center;
-        padding-top: 2em;
         font-weight: 200;
+        margin: 0 5px;
+        padding-top: 2em;
     }
 }
 
@@ -235,5 +236,11 @@ footer {
 
     .main {
         margin: 1em;
+    }
+
+    #header-img {
+        h1 {
+            padding-top: 1em;
+        }
     }
 }
